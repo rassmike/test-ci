@@ -10,7 +10,6 @@ on:
   pull_request_target:
     paths-ignore:
     - .github/workflows/test.yml
-    types: [opened, synchronize, reopened]
   workflow_dispatch:
     inputs: {}
 
