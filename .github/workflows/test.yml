@@ -1,0 +1,20 @@
+name: Just test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+    - .github/workflows/test.yml
+  pull_request_target:
+    paths-ignore:
+    - .github/workflows/test.yml
+    types: [ opened synchronize reopened]
+
+jobs:
+  just-test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Echo something
+      run: echo "it works!"
